@@ -1,8 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import rfqReducer from "../features/requestForQuote/rfqSlice";
+import balanceReducer from "../features/balance/balanceSlice";
+import ledgerReducer from "../features/ledger/ledgerSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    rfq: rfqReducer,
+    balance: balanceReducer,
+    ledger: ledgerReducer,
   },
 });

@@ -1,0 +1,23 @@
+.ledgerContainer {
+  background-color: var(--lightGrey);
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.ledgerTable {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.ledgerTable td,
+.ledgerTable th {
+  padding: 0;
+}
+
+.buy {
+  color: var(--blue);
+}
+
+.sell {
+  color: var(--red);
+}

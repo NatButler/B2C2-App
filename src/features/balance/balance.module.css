@@ -1,0 +1,30 @@
+.balanceContainer {
+  border-left: 1px solid var(--grey);
+  padding: 0 15px;
+}
+
+.balanceTable {
+  width: 100%;
+}
+
+.balanceTable td {
+  padding: 0;
+}
+
+.balValue {
+  text-align: right;
+  color: var(--blue);
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+.balValueNeg {
+  text-align: right;
+  color: var(--red);
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+.mono {
+  font-family: monospace;
+}
