@@ -21,17 +21,17 @@ export const ledgerSlice = createSlice({
       state.status = action.payload;
     },
   },
-  extraReducers: (builder) => {
-    builder.addCase(fetchLedger.pending, (state) => {
+  extraReducers: {
+    [fetchLedger.pending]: (state) => {
       state.status = statuses.LOADING;
-    });
-    builder.addCase(fetchLedger.rejected, (state) => {
+    },
+    [fetchLedger.rejected]: (state) => {
       state.status = statuses.ERROR;
-    });
-    builder.addCase(fetchLedger.fulfilled, (state, action) => {
+    },
+    [fetchLedger.fulfilled]: (state, action) => {
       state.status = statuses.IDLE;
       state.recentTrades = action.payload;
-    });
+    },
   },
 });
 

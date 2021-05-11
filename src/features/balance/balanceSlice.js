@@ -22,17 +22,17 @@ export const balanceSlice = createSlice({
       state.status = action.payload;
     },
   },
-  extraReducers: (builder) => {
-    builder.addCase(fetchBalance.pending, (state) => {
+  extraReducers: {
+    [fetchBalance.pending]: (state) => {
       state.status = statuses.LOADING;
-    });
-    builder.addCase(fetchBalance.rejected, (state) => {
+    },
+    [fetchBalance.rejected]: (state) => {
       state.status = statuses.ERROR;
-    });
-    builder.addCase(fetchBalance.fulfilled, (state, action) => {
+    },
+    [fetchBalance.fulfilled]: (state, action) => {
       state.status = statuses.IDLE;
       state.balance = action.payload;
-    });
+    },
   },
 });
 
